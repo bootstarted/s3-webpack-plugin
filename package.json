@@ -1,0 +1,39 @@
+{
+  "name": "s3-webpack-plugin",
+  "version": "0.1.0",
+  "author": "Izaak Schroeder <izaak.schroeder@gmail.com>",
+  "license": "CC0-1.0",
+  "repository": "metalabdesign/s3-webpack-plugin",
+  "keywords": [
+    "s3",
+    "webpack",
+    "webpack-plugin"
+  ],
+  "scripts": {
+    "prepublish": "./node_modules/.bin/babel -d ./ ./src --source-maps true",
+    "lint": "./node_modules/.bin/eslint .",
+    "spec": "NODE_ENV=test ./node_modules/.bin/_mocha -r adana-dump --compilers js:babel-core/register -R spec --recursive test/spec/**/*.spec.js",
+    "test": "npm run lint && npm run spec"
+  },
+  "dependencies": {
+    "vinyl": "^1.1.1",
+    "vinyl-s3": "^0.3.0"
+  },
+  "devDependencies": {
+    "adana-cli": "^0.1.1",
+    "adana-dump": "^0.1.0",
+    "adana-format-lcov": "^0.1.1",
+    "babel-cli": "^6.14.0",
+    "babel-preset-metalab": "^0.2.1",
+    "chai": "^3.5.0",
+    "eslint": "^2.10.2",
+    "eslint-config-metalab": "^4.0.1",
+    "eslint-plugin-filenames": "^0.2.0",
+    "eslint-plugin-import": "^1.13.0",
+    "eslint-plugin-lodash-fp": "^1.2.0",
+    "eslint-plugin-react": "^5.1.1",
+    "mocha": "^3.0.2",
+    "sinon": "^1.17.5",
+    "webpack": "^1.13.2"
+  }
+}

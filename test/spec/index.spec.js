@@ -7,11 +7,9 @@ import sinon from 'sinon';
 import s3 from 'vinyl-s3';
 import streams from 'stream';
 
-const basic = path.join('.', 'basic', 'index.js');
-
-const config = (options, entry = basic, extra) => {
+const config = (options, extra) => {
   return {
-    entry: path.join(__dirname, '..', '..', 'example', entry),
+    entry: path.join(__dirname, '..', '..', 'example', 'index.js'),
     context: path.join(__dirname, '..', '..', 'example'),
     output: {
       path: path.join(__dirname, 'dist'),

@@ -1,13 +1,4 @@
 {
-  "env": {
-    "test": {
-      "plugins": [
-        ["babel-plugin-transform-adana", {
-          "ignore": "test/**/*"
-        }]
-      ]
-    }
-  },
   "presets": [
     "metalab"
   ]
